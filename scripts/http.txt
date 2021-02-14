@@ -1,0 +1,104 @@
+
+REQUEST
+-------
+
+> GET /users/Juszczak HTTP/1.1
+> Host: api.github.com
+> User-Agent: curl/7.64.1
+> Accept: */*
+>
+
+[ czasownik ] [ ścieżka ] [ wersja protokołu ]
+[ nagłówki
+  ....
+  ....  ]
+__ [ pusta linijka ]
+
+
+RESPONSE
+--------
+
+< HTTP/1.1 200 OK
+< Date: Tue, 04 Feb 2020 20:12:20 GMT
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 1337
+< Server: GitHub.com
+< Status: 200 OK
+<
+{
+  "login": "Juszczak",
+  "id": 2137087,
+  "node_id": "MDQ6VXNlcjIxMzcwODc=",
+  "avatar_url": "https://avatars1.githubusercontent.com/u/2137087?v=4",
+}
+
+
+[ wersja protokołu ] [ status odpowiedzi ]
+[ nagłówki
+  .....
+  .....  ]
+__ (pusta linijka)
+[
+  ciało odpowiedzi / ciało wiadomości
+]
+
+
+
+CZASOWNIKI (METODY) HTTP
+------------------------
+
+GET
+HEAD
+POST
+PUT
+DELETE
+
+CONNECT
+OPTIONS
+TRACE
+
+
+NAGŁÓWKI
+--------
+< Date: Tue, 04 Feb 2020 20:12:20 GMT
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 1337
+< Server: GitHub.com
+< Status: 200 OK
+< X-RateLimit-Limit: 60
+< X-RateLimit-Remaining: 58
+< X-RateLimit-Reset: 1580850238
+< Cache-Control: public, max-age=60, s-maxage=60
+< Vary: Accept
+< ETag: "d73ac0b21966c62e2858cddaf1bedce6"
+< Last-Modified: Sat, 01 Feb 2020 18:45:01 GMT
+< X-GitHub-Media-Type: github.v3; format=json
+< Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit
+< Access-Control-Allow-Origin: *
+< Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+< X-Frame-Options: deny
+< X-Content-Type-Options: nosniff
+< X-XSS-Protection: 1; mode=block
+< Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+< Content-Security-Policy: default-src 'none'
+< Vary: Accept-Encoding
+< X-GitHub-Request-Id: CFD5:1A3DD:133955F:16E2A5E:5E39D024
+
+
+
+STATUSY HTTP
+------------
+
+100 - 1xx Informacyjne
+200 - 2xx Sukcesu
+300 - 3xx Przekierowań
+400 - 4xx Błąd klienta
+500 - 5xx Błąd serwera
+
+Pełna lista statusów: https://http.cat/
+
+
+
+
+
+
