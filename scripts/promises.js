@@ -18,7 +18,7 @@ promise
     console.log('promise fulfilled', value);
     return Number(value);
   })
-  .then(function(value) {
+  .then(function (value) {
     console.log('new value from upper then', value);
   })
   .catch(function (error) {
@@ -37,3 +37,7 @@ console.log('po metodzie then');
 
 // promise // [stan: fulfilled]
 // promise // [stan: rejected]
+
+const promise1 = Promise.resolve({ value: 'fulfilled' }); // [status: pending -> fulfilled]
+
+const promise2 = Promise.reject({ error: 'rejected' }); // [status: pending -> rejected]
