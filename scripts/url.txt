@@ -1,0 +1,79 @@
+
+
+URL
+---
+
+Uniform Resource Locator
+
+
+[schemat]:[część specyficzna dla schematu]
+
+http://[ część specyficzna dla HTTTP ]
+
+http://host:port/path-to/the-resource?query=1#fragment
+
+https://api.github.com/users/juszczak
+        ^ HOST       ^ ^ PATH       ^
+
+HOST
+----
+Nazwa domeny
+Adres IP
+
+api.github.com
+google.com
+localhost
+
+PORT
+----
+http://host:port
+
+            http  -> 80
+            https -> 443
+
+    http://localhost:5000
+    http://localhost:4203
+
+    3000
+    4200
+    5000
+
+    0 - 65536
+
+PATH
+----
+http://host:port/path-to/the-resource?query
+
+https://api.github.com/users/juszczak
+                       ^_PATH_______^
+
+QUERY
+-----
+
+http://host:port/path-to/the-resource?query
+                                     ?klucz1=wartość1&klucz2=wartość2
+
+https://www.google.com/search?q=javascript&rlz=1C5CHFA_enPL911PL911&oq=javascript&aqs=chrome..69i57j69i59j69i60l3j69i65l3.2056j0j7&sourceid=chrome&ie=UTF-8
+/search
+
+?q=javascript&rlz=1C5CHFA_enPL911PL911&oq=javascript&aqs=chrome..69i57j69i59j69i60l3j69i65l3.2056j0j7&sourceid=chrome&ie=UTF-8
+
+    q=javascript
+    rlz=1C5CHFA_enPL911PL911
+    oq=javascript
+    aqs=chrome..69i57j69i59j69i60l3j69i65l3.2056j0j7
+    sourceid=chrome
+    ie=UTF-8
+
+FRAGMENT
+--------
+
+Określenie częśći danego zasobu,
+np. paragraf na stronie
+
+https://angular.io/guide/http#requesting-a-typed-response
+                             ^__FRAGMENT________________^
+
+
+https://angular.io/guide/http#reading-the-full-response
+                             ^__FRAGMENT______________^
