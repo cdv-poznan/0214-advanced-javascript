@@ -65,6 +65,8 @@ audio.addEventListener('timeupdate', function (event) {
 var video = document.querySelector('#video');
 var videoSection = document.getElementById('video-section');
 
+/* FULLSCREEN */
+
 var fullscreenButton = document.getElementById('fullscreen-button');
 
 video.addEventListener('webkitfullscreenchange', function (event) {
@@ -74,6 +76,8 @@ video.addEventListener('webkitfullscreenchange', function (event) {
 fullscreenButton.addEventListener('click', function (event) {
   video.webkitRequestFullscreen();
 });
+
+/* SPEECH SYNTHESIS */
 
 var speak = document.getElementById('speak');
 var textarea = document.getElementById('text');
@@ -113,4 +117,21 @@ speak.addEventListener('click', function (event) {
   }
 
   speechSynthesis.speak(utterance);
+});
+
+/* USER MEDIA */
+
+var record = document.getElementById('record');
+var webcam = document.getElementById('webcam');
+
+record.addEventListener('click', function () {
+  navigator.mediaDevices
+    .getUserMedia({video: true})
+    .then(function (mediaStream) {
+      console.log(mediaStream);
+      webcam.srcObject = mediaStream;
+    })
+    .catch(function (err) {
+      console.log('error', err);
+    });
 });
