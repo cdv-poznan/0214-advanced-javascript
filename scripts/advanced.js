@@ -74,3 +74,43 @@ video.addEventListener('webkitfullscreenchange', function (event) {
 fullscreenButton.addEventListener('click', function (event) {
   video.webkitRequestFullscreen();
 });
+
+var speak = document.getElementById('speak');
+var textarea = document.getElementById('text');
+var voicesSelect = document.getElementById('voices');
+
+var voices;
+var selectedVoice;
+
+speechSynthesis.addEventListener('voiceschanged', function (event) {
+  voices = speechSynthesis.getVoices();
+
+  for (var i = 0; i < voices.length; i++) {
+    var voice = voices[i];
+
+    var option = document.createElement('option');
+    option.value = i;
+    option.innerText = voice.name + '(' + voice.lang + ')';
+
+    voicesSelect.append(option);
+  }
+
+  voicesSelect.addEventListener('change', function (event) {
+    selectedVoice = voices[event.target.value];
+  });
+});
+
+speak.addEventListener('click', function (event) {
+  var text = textarea.value;
+
+  var utterance = new SpeechSynthesisUtterance();
+  utterance.text = text;
+  utterance.rate = 1;
+  utterance.volume = 0.5;
+
+  if (selectedVoice) {
+    utterance.voice = selectedVoice;
+  }
+
+  speechSynthesis.speak(utterance);
+});
