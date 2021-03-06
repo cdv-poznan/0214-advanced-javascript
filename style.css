@@ -1,0 +1,55 @@
+p {
+  line-height: 1.6180339rem;
+}
+
+h2 {
+  color: #0f0;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.scrollable {
+  overflow: auto;
+}
+
+.box.red {
+  background-color: rgba(200, 100, 100, 0.2);
+}
+
+.box.green {
+  background-color: rgba(100, 200, 100, 0.2);
+}
+
+.box.blue {
+  background-color: rgba(100, 100, 200, 0.2);
+}
+
+.box.lg {
+  width: 400px;
+  height: 300px;
+}
+
+.box.md {
+  width: 200px;
+  height: 200px;
+}
+
+.box.sm {
+  width: 100px;
+  height: 100px;
+}
+
+.dotted {
+  border: 1px dotted;
+}
+
+#ex {
+  display: none;
+}
+
+#address {
+  font-size: 48px;
+}

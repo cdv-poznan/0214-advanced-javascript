@@ -10,6 +10,25 @@
       <a href="/canvas.html">Canvas</a>
     </nav>
     <main>
+      <section>
+        <h2>Audio</h2>
+
+        <audio id="audio" src="assets/music.mp3"></audio>
+
+        <button id="play">Play</button>
+        <span id="time"></span>
+        <span id="duration"></span>
+
+        <input id="volume" type="range" min="0" max="100" value="100" />
+      </section>
+
+      <section id="video-section">
+        <h2>Video</h2>
+
+        <video id="video" src="assets/rabbit320.webm"></video>
+        <button id="fullscreen-button">Toggle fullscreen</button>
+      </section>
+
       <section id="files">
         <h2>File upload</h2>
         <input id="upload" type="file" />
