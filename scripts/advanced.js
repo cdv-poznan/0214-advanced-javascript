@@ -125,8 +125,20 @@ var record = document.getElementById('record');
 var webcam = document.getElementById('webcam');
 
 record.addEventListener('click', function () {
+  /*
   navigator.mediaDevices
-    .getUserMedia({video: true})
+    .getUserMedia({video: true}) // kamera
+    .then(function (mediaStream) {
+      console.log(mediaStream);
+      webcam.srcObject = mediaStream;
+    })
+    .catch(function (err) {
+      console.log('error', err);
+    });
+  */
+
+  navigator.mediaDevices
+    .getDisplayMedia({video: true}) // ekran
     .then(function (mediaStream) {
       console.log(mediaStream);
       webcam.srcObject = mediaStream;
